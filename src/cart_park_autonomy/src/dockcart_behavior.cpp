@@ -71,11 +71,8 @@ BT::NodeStatus DockCart::onRunning()
 void DockCart::timer_callback()
 {
     rclcpp::Time current_time = node_ptr_->now();
-<<<<<<< HEAD
+
     if(current_time.seconds() - receive_time.seconds() >= 3) {
-=======
-    if(current_time.second() - receice_time.second() >= 3) {
->>>>>>> 5d60b5db238f532e66a1f970ff195fc47d85ef36
         geometry_msgs::msg::Twist cmd_vel_msg;
         cmd_vel_msg.linear.x = 0.0;
         cmd_vel_msg.linear.y = 0.0;
